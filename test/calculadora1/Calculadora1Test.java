@@ -69,13 +69,60 @@ public class Calculadora1Test {
    @Test
     public void testSuma() {
         System.out.println("suma");
-        //int a = 2;
-        //int b = 3;
-        //int expResult = 5;
         int result = calc.suma(a, b);
         assertEquals(esperado, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+
+    }
+    
+     @Test
+    public void testResta() {
+        System.out.println("resta");
+        int result = calc.resta(a, b);
+        assertEquals(esperado, result);
+    }
+    
+    @Test  (timeout=2000)
+    public void testOptimo() {
+        System.out.println("Optimo");
+        calc.optimo();
+    }
+    
+   
+    @Test
+    public  void testdiv(){
+        int res =calc.divi(a, b);
+        assertEquals(esperado, res);
+        
+    }
+    
+    @Test(expected = ArithmeticException.class)
+    public  void divexep(){
+        int res =calc.divi(a, b);
+    }
+
+     @Test
+    public void testDouble() {
+        System.out.println("Double");
+        float a= (float) Math.random();
+        float b= (float) Math.random();
+        float c= (float) 0.11;
+        float expResult =a+b+c;
+        float result = calc.dou(a, b);
+        double delta= 0.30;
+        assertEquals(esperado, result,delta);
+        
+        
+        
+    }
+    
+    @Test      
+    public void testObj() {
+        System.out.println("Double");
+        Calculadora1 a= new Calculadora1();
+        Calculadora1 b= new Calculadora1();
+        assertEquals(a,b);
+        
+        
     }
 
    
