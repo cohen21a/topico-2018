@@ -30,8 +30,8 @@ public class Calculadora1Test {
     @Parameterized.Parameters
     public static Iterable<Object[]>getData(){
         List<Object[]> obj= new ArrayList<>();
-        obj.add(new Object[] {3,1,4} );
-        obj.add(new Object[] {3,6,9} );
+        obj.add(new Object[] {4,2,6} );
+        //obj.add(new Object[] {3,6,9} );
         return  obj;
     }
     
@@ -81,7 +81,7 @@ public class Calculadora1Test {
         assertEquals(esperado, result);
     }
     
-    @Test  (timeout=2000)
+  /*  @Test  (timeout=2000)
     public void testOptimo() {
         System.out.println("Optimo");
         calc.optimo();
@@ -125,5 +125,5 @@ public class Calculadora1Test {
         
     }
 
-   
+   */
 }
